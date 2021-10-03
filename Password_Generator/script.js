@@ -80,12 +80,12 @@ let charGenerator = function() {
     console.log(randCharacter);
 }
 
-let generatePassword = function() {
-    passLength();
-    lowerIncluded();
-    upperIncluded();
-    symbolsIncluded();
-    numbersIncluded();
+let generatePassword = function(charGenerator) {
+    for(let i = 0; i < passLength; i++){
+        let finalCode = [].concat(charGenerator);
+        finalCode = String.finalCode
+        console.log(finalCode);
+    }
 };
 
 
