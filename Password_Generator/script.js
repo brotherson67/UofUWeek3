@@ -7,8 +7,8 @@ let passLength = function() {
         window.alert("Your password was too short, please try again");
     } else if (charNum > 128) {
         window.alert("Your password is too long, please try again");
-    } else if ((typeof charNum) !== number) {
-        window.alert("You entered an invalid input, please try again");
+    // } else if ((typeof charNum) !== ) {
+    //     window.alert("You entered an invalid input, please try again");
     } else {
         console.log(charNum);  //number of times loop will happen
     }
