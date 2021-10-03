@@ -53,6 +53,15 @@ let numbersIncluded = function() {
         console.log(false);
     }
 };
+
+
+
+// number generator 
+let genNumber = function() {
+    const initNumber = Math.random;
+    const multipyNumber = initNumber * //array - make array now;
+}
+
 let generatePassword = function() {
     passLength();
     lowerIncluded();
