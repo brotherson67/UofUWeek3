@@ -61,9 +61,9 @@ const upperArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 
 const numberArray = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96];
 //make master array, if characters are included or not
-// can merge master array by using [].concat(array)
+// can merge master array by using [].concat(array) (I found this on https://dmitripavlutin.com/javascript-merge-arrays/)
 let masterArray = []
-const concateMasterArray = function() {
+const concateMasterArray = function(masterArray) {
     if (lowerIncluded) {masterArray.concat(lowerArray)};
     if (upperIncluded) {masterArray.concat(upperArray)};
     if (symbolsIncluded) {masterArray.concat(symbolArray)};
@@ -72,11 +72,12 @@ const concateMasterArray = function() {
 };
 
 // number generator 
-let genNumber = function() {
+let charGenerator = function() {
     const initNumber = Math.random;
     let multipyNumber = initNumber * masterArray.length //array - make array now;
     multiplyNumber = Math.floor(multipyNumber);
-    console.log(multipyNumber);
+    const randCharacter = String.fromCharCode(multipyNumber)  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
+    console.log(randCharacter);
 }
 
 let generatePassword = function() {
