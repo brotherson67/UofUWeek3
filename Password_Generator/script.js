@@ -1,5 +1,50 @@
 // Assignment code here
 
+//function to create password length prompt
+let passLength = function() {
+    const charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
+    console.log(charNum);
+};
+
+//function to enable lowercase
+let lowerIncluded = function() {
+    const included = window.prompt("Do you want lowercase letters included? (Y/N).");
+    if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+};
+
+// function to enable uppercase
+let upperIncluded = function() {
+    const included = window.prompt("Do you want uppercase letters included? (Y/N).");
+    if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+};
+
+//function to enable symbols
+let symbolsIncluded = function() {
+    const included = window.prompt("Do you want special characters included? (Y/N).");
+    if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+};
+
+//function to enable numbers
+let numbersIncluded = function() {
+    const included = window.prompt("Do you want numbers to be included? (Y/N).");
+    if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -11,7 +56,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+} 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -33,4 +78,9 @@ When I select the 'Generate Password" button
   Password is generated to an alert or to the page itself
     put it in an alert first to get it done
     after that mess with the page to get it to display in place of the 'your secure password'
+
+
+    to generate the password I can use ASC symbols
+
 */
+
