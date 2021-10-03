@@ -5,10 +5,8 @@ let passLength = function() {
     const charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
     if (charNum < 8) {
         window.alert("Your password was too short, please try again");
-        break;
     } else if (charNum > 128) {
         window.alert("Your password is too long, please try again");
-        break;
     } else if ((typeof charNum) !== number) {
         window.alert("You entered an invalid input, please try again");
     } else {
@@ -55,8 +53,13 @@ let numbersIncluded = function() {
         console.log(false);
     }
 };
-
-
+let generatePassword = function() {
+    passLength();
+    lowerIncluded();
+    upperIncluded();
+    symbolsIncluded();
+    numbersIncluded();
+};
 
 
 
