@@ -61,12 +61,13 @@ const upperArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 
 const numberArray = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96];
 //make master array, if characters are included or not
-
+const masterArray = []
+const 
 
 // number generator 
 let genNumber = function() {
     const initNumber = Math.random;
-    const multipyNumber = initNumber * //array - make array now;
+    const multipyNumber = initNumber * masterArray.length //array - make array now;
 }
 
 let generatePassword = function() {
