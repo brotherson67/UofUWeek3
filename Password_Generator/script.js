@@ -74,7 +74,9 @@ const concateMasterArray = function() {
 // number generator 
 let genNumber = function() {
     const initNumber = Math.random;
-    const multipyNumber = initNumber * masterArray.length //array - make array now;
+    let multipyNumber = initNumber * masterArray.length //array - make array now;
+    multiplyNumber = Math.floor(multipyNumber);
+    console.log(multipyNumber);
 }
 
 let generatePassword = function() {
