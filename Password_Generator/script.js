@@ -70,16 +70,13 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 
 
 const generatePassword = function(passLength, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded) {
-    lowerIncluded();
-    upperIncluded();
-    symbolsIncluded();
-    numbersIncluded();
     let masterArray = [];
     if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
     if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
     if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
     if (numbersIncluded) {masterArray = masterArray.concat(numberArray)};
     let passwordArray = [];
+    debugger
     for (let i = 0; i < passLength; i++){
         let finalCharacter = String.fromCharCode[Math.floor(Math.random * masterArray.length)]  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
         passwordArray = passwordArray.concat(finalCharacter);
@@ -95,11 +92,16 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+
     let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
     const lowIncluded = window.prompt("Do you want lowercase letters included? (Y/N).");
     const upIncluded = window.prompt("Do you want uppercase letters included? (Y/N).");
     const charIncluded = window.prompt("Do you want special characters included? (Y/N).");
     const numIncluded = window.prompt("Do you want numbers to be included? (Y/N).");
+    lowerIncluded(lowIncluded);
+    upperIncluded(upIncluded);
+    symbolsIncluded(charIncluded);
+    numbersIncluded(numIncluded);
 
   var password = generatePassword(charNum, lowIncluded, upIncluded, charIncluded, numIncluded);
   var passwordText = document.querySelector("#password");
