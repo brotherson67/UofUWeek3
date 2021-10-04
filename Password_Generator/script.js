@@ -1,18 +1,22 @@
 // Assignment code here
 
+let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
+
 //function to create password length prompt
-let passLength = function() {
-    const charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
-    if (charNum < 8) {
+let passLength = function(length) {
+     if (length < 8) {
         window.alert("Your password was too short, please try again");
-    } else if (charNum > 128) {
+    } else if (length > 128) {
         window.alert("Your password is too long, please try again");
     // } else if ((typeof charNum) !== ) {
     //     window.alert("You entered an invalid input, please try again");
     } else {
-        console.log(charNum);  //number of times loop will happen
+        console.log(length);  //number of times loop will happen
     }
 };
+
+passLength(charNum);
+
 
 //function to enable lowercase
 let lowerIncluded = function() {
@@ -71,6 +75,11 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 
 
 const generatePassword = function(passLength, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded ) {
+    passLength();
+    lowerIncluded();
+    upperIncluded();
+    symbolsIncluded();
+    numbersIncluded();
     let masterArray = [];
     if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
     if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
