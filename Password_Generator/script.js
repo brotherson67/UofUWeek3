@@ -83,15 +83,13 @@ const generatePassword = function(passLength, lowerIncluded, upperIncluded, symb
     if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
     if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
     if (numbersIncluded) {masterArray = masterArray.concat(numberArray)};
-    console.log(masterArray)
-    let finalCharacter = String.fromCharCode[Math.floor(Math.random * masterArray.length)]  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
-
+    let passwordArray = [];
     for (let i = 0; i < passLength; i++){
         let finalCharacter = String.fromCharCode[Math.floor(Math.random * masterArray.length)]  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
-        let passwordArray = [];
-        passwordArray.concat(finalCharacter);
+        passwordArray = passwordArray.concat(finalCharacter);
+
     }
-    
+    return passwordArray
 };
 
 
