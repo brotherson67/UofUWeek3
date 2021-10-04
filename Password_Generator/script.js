@@ -18,8 +18,7 @@ let passLength = function(length) {
 
 
 //function to enable lowercase
-let lowerIncluded = function() {
-    const included = window.prompt("Do you want lowercase letters included? (Y/N).");
+let lowerIncluded = function(included) {
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
         return true;
     } else {
@@ -28,8 +27,7 @@ let lowerIncluded = function() {
 };
 
 // function to enable uppercase
-let upperIncluded = function() {
-    const included = window.prompt("Do you want uppercase letters included? (Y/N).");
+let upperIncluded = function(included) {
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
         return true;
     } else {
@@ -38,8 +36,7 @@ let upperIncluded = function() {
 };
 
 //function to enable symbols
-let symbolsIncluded = function() {
-    const included = window.prompt("Do you want special characters included? (Y/N).");
+let symbolsIncluded = function(included) {
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
         return true;
     } else {
@@ -48,8 +45,7 @@ let symbolsIncluded = function() {
 };
 
 //function to enable numbers
-let numbersIncluded = function() {
-    const included = window.prompt("Do you want numbers to be included? (Y/N).");
+let numbersIncluded = function(included) {
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
         return true;
     } else {
@@ -74,10 +70,10 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 
 
 const generatePassword = function(passLength, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded) {
-    // lowerIncluded();
-    // upperIncluded();
-    // symbolsIncluded();
-    // numbersIncluded();
+    lowerIncluded();
+    upperIncluded();
+    symbolsIncluded();
+    numbersIncluded();
     let masterArray = [];
     if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
     if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
@@ -100,11 +96,12 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
     let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
-    lowerIncluded();
-    upperIncluded();
-    numbersIncluded();
-    symbolsIncluded();
-  var password = generatePassword(charNum, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded);
+    const lowIncluded = window.prompt("Do you want lowercase letters included? (Y/N).");
+    const upIncluded = window.prompt("Do you want uppercase letters included? (Y/N).");
+    const charIncluded = window.prompt("Do you want special characters included? (Y/N).");
+    const numIncluded = window.prompt("Do you want numbers to be included? (Y/N).");
+
+  var password = generatePassword(charNum, lowIncluded, upIncluded, charIncluded, numIncluded);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
