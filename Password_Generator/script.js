@@ -54,6 +54,14 @@ let numbersIncluded = function() {
     }
 };
 
+
+// passLength();
+// lowerIncluded();
+// upperIncluded();
+// symbolsIncluded();
+// numbersIncluded();
+
+
 //array of characters
 //can merge arrays later?
 const lowerArray = [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122];
@@ -63,13 +71,16 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 //make master array, if characters are included or not
 // can merge master array by using [].concat(array) (I found this on https://dmitripavlutin.com/javascript-merge-arrays/)
 let masterArray = []
-const concateMasterArray = function(masterArray) {
-    if (lowerIncluded) {masterArray.concat(lowerArray)};
-    if (upperIncluded) {masterArray.concat(upperArray)};
-    if (symbolsIncluded) {masterArray.concat(symbolArray)};
-    if (numbersIncluded) {masterArray.concat(numberArray)};
-    console.log(masterArray);
+const concateMasterArray = function(lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded, masterArray) {
+    if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
+    if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
+    if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
+    if (numbersIncluded) {masterArray = masterArray.push(numberArray)
+        console.log(masterArray);};
+        console.log(masterArray);
 };
+
+console.log(masterArray);
 
 // number generator 
 let charGenerator = function() {
@@ -81,6 +92,12 @@ let charGenerator = function() {
 }
 
 let generatePassword = function(charGenerator) {
+    lowerIncluded();
+    upperIncluded();
+    symbolsIncluded();
+    numbersIncluded();
+    console.log("HELLO WORLD")
+    concateMasterArray();
     for(let i = 0; i < passLength; i++){
         let finalCode = [].concat(charGenerator);
         finalCode = String.finalCode
@@ -88,7 +105,8 @@ let generatePassword = function(charGenerator) {
     }
 };
 
-
+generatePassword();
+/*
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -105,6 +123,13 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+/*
+When the button is selected, writePassword is activated
+> writePassword sets var(password) = generatePassword
+> generatePassword needs to loop through the number of characters in the passwrod
+> 
+*/
 
 
 /*
@@ -127,4 +152,6 @@ When I select the 'Generate Password" button
     to generate the password I can use ASC symbols
 
 */
+
+
 
