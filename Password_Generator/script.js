@@ -1,6 +1,6 @@
 // Assignment code here
 
-let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
+//let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
 
 //function to create password length prompt
 let passLength = function(length) {
@@ -15,7 +15,6 @@ let passLength = function(length) {
     }
 };
 
-passLength(charNum);
 
 
 //function to enable lowercase
@@ -74,22 +73,25 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 // if (numbersIncluded) {masterArray = masterArray.concat(numberArray)};
 
 
-const generatePassword = function(passLength, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded ) {
-    passLength();
-    lowerIncluded();
-    upperIncluded();
-    symbolsIncluded();
-    numbersIncluded();
+const generatePassword = function(passLength, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded) {
+    // lowerIncluded();
+    // upperIncluded();
+    // symbolsIncluded();
+    // numbersIncluded();
     let masterArray = [];
     if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
     if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
     if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
     if (numbersIncluded) {masterArray = masterArray.concat(numberArray)};
-    let finalCharacter = String.fromCharCode(Math.floor(Math.random * masterArray.length))  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
+    console.log(masterArray)
+    let finalCharacter = String.fromCharCode[Math.floor(Math.random * masterArray.length)]  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
 
     for (let i = 0; i < passLength; i++){
-
+        let finalCharacter = String.fromCharCode[Math.floor(Math.random * masterArray.length)]  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
+        let passwordArray = [];
+        passwordArray.concat(finalCharacter);
     }
+    
 };
 
 
@@ -99,7 +101,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+    let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
+  var password = generatePassword(charNum, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
