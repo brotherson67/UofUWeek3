@@ -72,11 +72,10 @@ if (numbersIncluded) {masterArray = masterArray.concat(numberArray)};
 // number generator 
 let charGenerator = function() {
    //const multipyNumber =  Math.floor(Math.random * masterArray.length);
-   console.log(String.fromCharCode( Math.floor(Math.random * masterArray.length)))  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
+   String.fromCharCode(Math.floor(Math.random * masterArray.length))  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
 
 };
 
-charGenerator();
 
 const generatePassword = function(passLength, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded ) {
     let masterArray = [];
@@ -84,12 +83,9 @@ const generatePassword = function(passLength, lowerIncluded, upperIncluded, symb
     if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
     if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
     if (numbersIncluded) {masterArray = masterArray.concat(numberArray)};
+    let finalCharacter = String.fromCharCode(Math.floor(Math.random * masterArray.length))  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
+
     for (let i = 0; i < passLength; i++){
-        let finalCharacter = charGenerator();    
-        console.log(finalCharacter);
-        const finalArray = [];
-        finalArray.concat(finalCharacter);
-        console.log(finalArray);
 
     }
 };
