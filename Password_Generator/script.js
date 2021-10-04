@@ -68,44 +68,28 @@ const lowerArray = [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109
 const upperArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90];
 const numberArray = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96];
+
+// lowerIncluded();
+
 //make master array, if characters are included or not
 // can merge master array by using [].concat(array) (I found this on https://dmitripavlutin.com/javascript-merge-arrays/)
-let masterArray = []
-const concateMasterArray = function(lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded, masterArray) {
-    if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
-    if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
-    if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
-    if (numbersIncluded) {masterArray = masterArray.push(numberArray)
-        console.log(masterArray);};
-        console.log(masterArray);
-};
-
-console.log(masterArray);
+let masterArray = [];
+if (lowerIncluded) {masterArray = masterArray.concat(lowerArray)};
+if (upperIncluded) {masterArray = masterArray.concat(upperArray)};
+if (symbolsIncluded) {masterArray = masterArray.concat(symbolArray)};
+if (numbersIncluded) {masterArray = masterArray.push(numberArray)};
 
 // number generator 
 let charGenerator = function() {
-    const initNumber = Math.random;
-    let multipyNumber = initNumber * masterArray.length //array - make array now;
-    multiplyNumber = Math.floor(multipyNumber);
+   const multipyNumber =  Math.floor(Math.random * masterArray.length);
     const randCharacter = String.fromCharCode(multipyNumber)  //found this command on https://stackoverflow.com/questions/94037/convert-character-to-ascii-code-in-javascript
     console.log(randCharacter);
-}
-
-let generatePassword = function(charGenerator) {
-    lowerIncluded();
-    upperIncluded();
-    symbolsIncluded();
-    numbersIncluded();
-    console.log("HELLO WORLD")
-    concateMasterArray();
-    for(let i = 0; i < passLength; i++){
-        let finalCode = [].concat(charGenerator);
-        finalCode = String.finalCode
-        console.log(finalCode);
-    }
 };
 
-generatePassword();
+charGenerator();
+
+
+
 /*
 
 // Get references to the #generate element
@@ -152,6 +136,3 @@ When I select the 'Generate Password" button
     to generate the password I can use ASC symbols
 
 */
-
-
-
