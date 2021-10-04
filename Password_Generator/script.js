@@ -11,7 +11,7 @@ let passLength = function(length) {
     // } else if ((typeof charNum) !== ) {
     //     window.alert("You entered an invalid input, please try again");
     } else {
-        console.log(length);  //number of times loop will happen
+        return length;  //number of times loop will happen
     }
 };
 
@@ -21,7 +21,7 @@ let passLength = function(length) {
 let lowerIncluded = function() {
     const included = window.prompt("Do you want lowercase letters included? (Y/N).");
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
-        console.log(true);
+        return true;
     } else {
         console.log(false);
     }
@@ -31,7 +31,7 @@ let lowerIncluded = function() {
 let upperIncluded = function() {
     const included = window.prompt("Do you want uppercase letters included? (Y/N).");
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
-        console.log(true);
+        return true;
     } else {
         console.log(false);
     }
@@ -41,7 +41,7 @@ let upperIncluded = function() {
 let symbolsIncluded = function() {
     const included = window.prompt("Do you want special characters included? (Y/N).");
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
-        console.log(true);
+        return true;
     } else {
         console.log(false);
     }
@@ -51,7 +51,7 @@ let symbolsIncluded = function() {
 let numbersIncluded = function() {
     const included = window.prompt("Do you want numbers to be included? (Y/N).");
     if (included === "y" || included === "Y" || included === "YES" || included === "yes") {
-        console.log(true);
+        return true;
     } else {
         console.log(false);
     }
@@ -100,6 +100,10 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
     let charNum = window.prompt("Please enter the desired length of you password (req. 8 - 128 characters).");
+    lowerIncluded();
+    upperIncluded();
+    numbersIncluded();
+    symbolsIncluded();
   var password = generatePassword(charNum, lowerIncluded, upperIncluded, symbolsIncluded, numbersIncluded);
   var passwordText = document.querySelector("#password");
 
