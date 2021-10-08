@@ -1,5 +1,20 @@
 // Assignment code here
 
+//function to call html range chooser
+
+// create empty master array
+
+// create arrays for each of the character sets
+
+// create a function linked to the checkboxes
+
+//create random number generator 
+
+const generatePassword = function() {
+    //pass in character amount
+    // pass in master array
+
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -14,4 +29,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("submit", writePassword);
