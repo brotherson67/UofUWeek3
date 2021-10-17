@@ -21,14 +21,14 @@ console.log("5" + symbolArray);
 // Check to see if if funciton prints master array with the elements of lowerArray.
 let lowerBox = function(masterArray){
   for (i = 0; i < lowerArray.length; i++) {
-    masterArray += lowerArray[i];
+    masterArray.push(lowerArray[i]);
   }
   return masterArray
 };
 // testing which function outputs desired result
-console.log("6" + lowerBox(masterArray));
-console.log("7" + lowerBox());
-console.log("8" + lowerBox(masterArray))
+console.log("test")
+console.log(lowerBox(masterArray));
+
 
 
 //create random number generator 
