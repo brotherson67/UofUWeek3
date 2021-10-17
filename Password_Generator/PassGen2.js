@@ -32,8 +32,8 @@ let lowerBox = function(masterArray){
   return masterArray
 };
 // testing which function outputs desired result
-console.log("test")
-console.log(lowerBox(masterArray));
+// console.log("test")
+// console.log(lowerBox(masterArray));
 
 
 // Check to see if if funciton prints master array with the elements of UpperArray.
@@ -44,8 +44,8 @@ let upperBox = function(masterArray){
   return masterArray
 };
 // testing which function outputs desired result
-console.log("test")
-console.log(upperBox(masterArray));
+// console.log("test")
+// console.log(upperBox(masterArray));
 
 
 // Check to see if if funciton prints master array with the elements of numberArray.
@@ -56,8 +56,8 @@ let numberBox = function(masterArray){
   return masterArray
 };
 // testing which function outputs desired result
-console.log("test")
-console.log(numberBox(masterArray));
+// console.log("test")
+// console.log(numberBox(masterArray));
 
 
 // Check to see if if funciton prints master array with the elements of symbolArray.
@@ -68,8 +68,29 @@ let symbolBox= function(masterArray){
   return masterArray
 };
 // testing which function outputs desired result
-console.log("test")
-console.log(symbolBox(masterArray));
+// console.log("test")
+// console.log(symbolBox(masterArray));
+
+console.log(upperCase)
+
+//if boxes are checked
+if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
+  window.alert("You need to choose at least one kind of character for your password!")
+};
+if (lowerCase){
+  lowerBox(masterArray)
+};
+if (upperCase) {
+  upperBox(masterArray)
+};
+if (numbers) {
+  numberBox(masterArray)
+};
+if (symbols) {
+  symbolBox(masterArray)
+};
+console.log("if statement test")
+console.log(masterArray)
 
 //create random number generator 
 
