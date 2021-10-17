@@ -25,8 +25,11 @@ let lowerBox = function(masterArray){
   }
   return masterArray
 };
+// testing which function outputs desired result
+console.log("6" + lowerBox(masterArray));
+console.log("7" + lowerBox());
+console.log("8" + lowerBox(masterArray))
 
-console.log("6" + lowerBox(masterArray))
 
 //create random number generator 
 
