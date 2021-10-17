@@ -1,5 +1,10 @@
 // Assignment code here
 
+
+// need to create slider function
+// need to link slider to random number generator character amount
+// need to add ASC character translator
+
 //global variables
 let lowerCase = document.getElementById("lowerCase");
 let upperCase = document.getElementById("upperCase");
