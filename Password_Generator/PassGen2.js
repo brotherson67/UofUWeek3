@@ -75,7 +75,16 @@ let isCheckbox = function() {
   console.log(masterArray)
 };
 
+
+
 //create random number generator 
+  // link to the sliding bar
+let randNum = function(){
+  for (i = 0; i < numChar; i++) {
+
+  }
+}
+
 
 const generatePassword = function() {
     //pass in character amount
