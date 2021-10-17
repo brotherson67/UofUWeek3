@@ -3,10 +3,30 @@
 //function to call html range chooser
 
 // create empty master array
+let masterArray = [];
+console.log("1" + masterArray);
 
-// create arrays for each of the character sets
+// array for each character set
+const lowerArray = [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122];
+console.log("2" + lowerArray)
+const upperArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90];
+console.log("3" + upperArray);
+const numberArray = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+console.log("4" + numberArray);
+const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96];
+console.log("5" + symbolArray);
 
 // create a function linked to the checkboxes
+
+// Check to see if if funciton prints master array with the elements of lowerArray.
+let lowerBox = function(masterArray){
+  for (i = 0; i < lowerArray.length; i++) {
+    masterArray += lowerArray[i];
+  }
+  return masterArray
+};
+
+console.log("6" + lowerBox(masterArray))
 
 //create random number generator 
 
