@@ -1,5 +1,11 @@
 // Assignment code here
 
+//global variables
+let lowerCase = document.getElementById("lowerCase");
+let upperCase = document.getElementById("upperCase");
+let numbers = document.getElementById("numbers")
+let symbols = document.getElementById("symbols");
+
 //function to call html range chooser
 
 // create empty master array
