@@ -51,7 +51,19 @@ let numberBox = function(masterArray){
 };
 // testing which function outputs desired result
 console.log("test")
-console.log(lowerBox(masterArray));
+console.log(numberBox(masterArray));
+
+
+// Check to see if if funciton prints master array with the elements of symbolArray.
+let symbolBox= function(masterArray){
+  for (i = 0; i < symbolArray.length; i++) {
+    masterArray.push(symbolArray[i]);
+  }
+  return masterArray
+};
+// testing which function outputs desired result
+console.log("test")
+console.log(symbolBox(masterArray));
 
 //create random number generator 
 
