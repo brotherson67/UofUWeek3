@@ -30,6 +30,28 @@ console.log("test")
 console.log(lowerBox(masterArray));
 
 
+// Check to see if if funciton prints master array with the elements of UpperArray.
+let upperBox = function(masterArray){
+  for (i = 0; i < upperArray.length; i++) {
+    masterArray.push(upperArray[i]);
+  }
+  return masterArray
+};
+// testing which function outputs desired result
+console.log("test")
+console.log(upperBox(masterArray));
+
+
+// Check to see if if funciton prints master array with the elements of numberArray.
+let numberBox = function(masterArray){
+  for (i = 0; i < numberArray.length; i++) {
+    masterArray.push(numberArray[i]);
+  }
+  return masterArray
+};
+// testing which function outputs desired result
+console.log("test")
+console.log(lowerBox(masterArray));
 
 //create random number generator 
 
