@@ -1,17 +1,10 @@
 // Assignment code here
 
-
-// need to create slider function
-// need to link slider to random number generator character amount
-// need to add ASC character translator
-
 //global variables
 let lowerCase = document.getElementById("lowerCase");
 let upperCase = document.getElementById("upperCase");
 let numbers = document.getElementById("numbers")
 let symbols = document.getElementById("symbols");
-
-//function to call html range chooser
 
 // create empty master array
 let masterArray = [];
@@ -22,9 +15,11 @@ const upperArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 
 const numberArray = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96];
 
-// create a function linked to the checkboxes
+// need to create slider function
+// need to link slider to random number generator character amount
+// need to add ASC character translator
 
-// Check to see if if funciton prints master array with the elements of lowerArray.
+//lowerCase function
 let lowerBox = function(masterArray){
   for (i = 0; i < lowerArray.length; i++) {
     masterArray.push(lowerArray[i]);
@@ -32,7 +27,7 @@ let lowerBox = function(masterArray){
   return masterArray
 };
 
-// Check to see if if funciton prints master array with the elements of UpperArray.
+//UpperCase function
 let upperBox = function(masterArray){
   for (i = 0; i < upperArray.length; i++) {
     masterArray.push(upperArray[i]);
@@ -40,7 +35,7 @@ let upperBox = function(masterArray){
   return masterArray
 };
 
-// Check to see if if funciton prints master array with the elements of numberArray.
+//numberFunction
 let numberBox = function(masterArray){
   for (i = 0; i < numberArray.length; i++) {
     masterArray.push(numberArray[i]);
@@ -48,7 +43,7 @@ let numberBox = function(masterArray){
   return masterArray
 };
 
-// Check to see if if funciton prints master array with the elements of symbolArray.
+//Symbols function
 let symbolBox= function(masterArray){
   for (i = 0; i < symbolArray.length; i++) {
     masterArray.push(symbolArray[i]);
