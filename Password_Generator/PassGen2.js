@@ -5,8 +5,6 @@ let lowerCase = document.getElementById("lowerCase");
 let upperCase = document.getElementById("upperCase");
 let numbers = document.getElementById("numbers")
 let symbols = document.getElementById("symbols");
-//range elements
-let charNum = document.getElementById("charNum")
 
 // create empty master array
 let masterArray = [];
@@ -20,6 +18,13 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 // need to create slider function
 // need to link slider to random number generator character amount
 // need to add ASC character translator
+
+//range elements
+let charNum = document.getElementById("charNum")
+
+console.dir(charNum);
+
+
 
 //lowerCase function
 let lowerBox = function(masterArray){
@@ -70,14 +75,25 @@ let isCheckbox = function(lowerBox, upperBox, numberBox, symbolBox) {
   if (symbols.checked) {
     symbolBox(masterArray)
   };
+<<<<<<< HEAD
   // if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
   //   window.alert("You need to choose at least one kind of character for your password!")
   // };  
+=======
+  if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
+    window.alert("You need to choose at least one kind of character for your password!")
+  };
+  console.log("if statement test")
+  console.log(masterArray)
+>>>>>>> parent of a75109b (added random number generator)
 };
+
+
 
 //create random number generator 
   // link to the sliding bar
 let randNum = function(){
+<<<<<<< HEAD
   isCheckbox();
   let passwordArray = [];
   if (!masterArray){
@@ -88,13 +104,20 @@ let randNum = function(){
       number = Math.floor(number);
       passwordArray.push(number);
     }
+=======
+  for (i = 0; i < numChar; i++) {
+
+>>>>>>> parent of a75109b (added random number generator)
   }
   console.log(passwordArray)
   return passwordArray
 }
   
 
+<<<<<<< HEAD
 symbols.addEventListener("submit", randNum())
+=======
+>>>>>>> parent of a75109b (added random number generator)
 
 const generatePassword = function() {
     //pass in character amount
