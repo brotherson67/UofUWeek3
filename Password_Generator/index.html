@@ -29,34 +29,36 @@
           ></textarea>
         </div>
 
-        <div class="checkBox" id="sliderDiv">
-          <input type="range" min="8" max="128" id="charNum">
-          <span id="rangeSpan">24</span>
-        </div>
+        <form>
+          <div class="checkBox" id="charNumDiv">
+            <input type="text" id="charNum" value="24">
+            <label>Character Amount(8 - 124)</label>
+          </div>
 
-        <div class="checkBox">
-          <input type="checkbox" id="lowerCase">
-          <label>Included Lowercase Letters</label>
-        </div>
+          <div class="checkBox">
+            <input type="checkbox" id="lowerCase">
+            <label>Included Lowercase Letters</label>
+          </div>
 
-        <div class="checkBox">
-          <input type="checkbox" id="upperCase">
-          <label>Include Uppercase Letters</label>
-        </div>
+          <div class="checkBox">
+            <input type="checkbox" id="upperCase">
+            <label>Include Uppercase Letters</label>
+          </div>
 
-        <div class="checkBox">
-          <input type="checkbox" id="numbers">
-          <label>Include Numbers</label>
-        </div>
+          <div class="checkBox">
+            <input type="checkbox" id="numbers">
+            <label>Include Numbers</label>
+          </div>
 
-        <div class="checkBox">
-          <input type="checkbox" id="symbols">
-          <label>Include Symbols</label>
-        </div>
+          <div class="checkBox">
+            <input type="checkbox" id="symbols">
+            <label>Include Symbols</label>
+          </div>
 
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+          <div class="card-footer">
+            <button id="generate" class="btn" type="submit">Generate Password</button>
+          </div>
+        </form>
         
       </div>
     </div>

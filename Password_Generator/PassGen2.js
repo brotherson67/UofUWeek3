@@ -19,6 +19,13 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 // need to link slider to random number generator character amount
 // need to add ASC character translator
 
+//range elements
+let charNum = document.getElementById("charNum")
+
+console.dir(charNum);
+
+
+
 //lowerCase function
 let lowerBox = function(masterArray){
   for (i = 0; i < lowerArray.length; i++) {
@@ -106,3 +113,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("submit", writePassword);
+
