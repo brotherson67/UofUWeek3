@@ -75,17 +75,11 @@ let isCheckbox = function(lowerBox, upperBox, numberBox, symbolBox) {
   if (symbols.checked) {
     symbolBox(masterArray)
   };
-<<<<<<< HEAD
-  // if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
-  //   window.alert("You need to choose at least one kind of character for your password!")
-  // };  
-=======
   if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
     window.alert("You need to choose at least one kind of character for your password!")
   };
   console.log("if statement test")
   console.log(masterArray)
->>>>>>> parent of a75109b (added random number generator)
 };
 
 
@@ -93,31 +87,14 @@ let isCheckbox = function(lowerBox, upperBox, numberBox, symbolBox) {
 //create random number generator 
   // link to the sliding bar
 let randNum = function(){
-<<<<<<< HEAD
-  isCheckbox();
-  let passwordArray = [];
-  if (!masterArray){
-    alert("master Array is empty you need to check a box")
-  } else {
-    for (i = 0; i < charNum.value; i++) {
-      let number = Math.random() * masterArray.length
-      number = Math.floor(number);
-      passwordArray.push(number);
-    }
-=======
   for (i = 0; i < numChar; i++) {
 
->>>>>>> parent of a75109b (added random number generator)
   }
   console.log(passwordArray)
   return passwordArray
 }
   
 
-<<<<<<< HEAD
-symbols.addEventListener("submit", randNum())
-=======
->>>>>>> parent of a75109b (added random number generator)
 
 const generatePassword = function() {
     //pass in character amount
