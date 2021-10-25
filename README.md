@@ -64,20 +64,7 @@ SECONDARY-OUTLINE
         * add range option with min 8 and max 128
         * add checkboxes that represent the various characters
     JS
-        * the event listener is already added
-            change to 'submit' type instead of 'click'
-        * create global variables
-        * create function that checks the number of characters in the range bar and returns that number
-        * create empty array that represents the character arra
-        * define characters - multiple arrays 
-        * create function that checks if a character checkbox was checked if so push the character array to the master array
-        * create a random number generator function
-            make a 'for' loop
-                the returned value of the password length will be the condition
-            make a random number generator and multiply it by the length of master array
-            round that number down
-            create a varaible and set it = translate rounded number to ASCII symbol
-            make a last array
-            push the new variable to the array
-            return the value of that array
+        * check to see if boxes are checked
+        * if a box is checked I want to add the corresponding symbols to an array
+        *
         
