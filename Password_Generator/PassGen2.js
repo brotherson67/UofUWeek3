@@ -55,48 +55,51 @@ let symbolBox= function(masterArray){
 
 
 // function to let checkboxes be checked
-let isCheckbox = function() {
-
+let isCheckbox = function(lowerBox, upperBox, numberBox, symbolBox) {
+  
   //if boxes are checked
-  if (lowerCase){
+  if (lowerCase.checked){
     lowerBox(masterArray)
   };
-  if (upperCase) {
+  if (upperCase.checked) {
     upperBox(masterArray)
   };
-  if (numbers) {
+  if (numbers.checked) {
     numberBox(masterArray)
   };
-  if (symbols) {
+  if (symbols.checked) {
     symbolBox(masterArray)
   };
-  if (!lowerCase && !upperCase && !numbers && !symbols) {
-    window.alert("You need to choose at least one kind of character for your password!")
-  };
+  // if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
+  //   window.alert("You need to choose at least one kind of character for your password!")
+  // };  
 };
 
 //create random number generator 
   // link to the sliding bar
 let randNum = function(){
   isCheckbox();
-  for (i = 0; i < charNum.value; i++) {
-    let number = Math.random() * masterArray.length
-    number = Math.floor(number);
-    console.log(number)
+  let passwordArray = [];
+  if (!masterArray){
+    alert("master Array is empty you need to check a box")
+  } else {
+    for (i = 0; i < charNum.value; i++) {
+      let number = Math.random() * masterArray.length
+      number = Math.floor(number);
+      passwordArray.push(number);
+    }
   }
+  console.log(passwordArray)
+  return passwordArray
 }
+  
 
-randNum();
+symbols.addEventListener("submit", randNum())
 
 const generatePassword = function() {
     //pass in character amount
     // pass in master array
-    isCheckbox();
-    for (i = 0; i < charNum.value; i++) {
-      let number = Math.random() * masterArray.length
-      number = Math.floor(number);
-      console.log(number)
-    }
+
 }
 
 // Get references to the #generate element
