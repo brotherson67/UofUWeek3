@@ -5,6 +5,8 @@ let lowerCase = document.getElementById("lowerCase");
 let upperCase = document.getElementById("upperCase");
 let numbers = document.getElementById("numbers")
 let symbols = document.getElementById("symbols");
+//range elements
+let charNum = document.getElementById("charNum")
 
 // create empty master array
 let masterArray = [];
@@ -18,13 +20,6 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 // need to create slider function
 // need to link slider to random number generator character amount
 // need to add ASC character translator
-
-//range elements
-let charNum = document.getElementById("charNum")
-
-console.dir(charNum);
-
-
 
 //lowerCase function
 let lowerBox = function(masterArray){
@@ -75,28 +70,33 @@ let isCheckbox = function() {
   if (symbols) {
     symbolBox(masterArray)
   };
-  if (!lowerCase.checked && !upperCase.checked && !numbers.checked && !symbols.checked) {
+  if (!lowerCase && !upperCase && !numbers && !symbols) {
     window.alert("You need to choose at least one kind of character for your password!")
   };
-  console.log("if statement test")
-  console.log(masterArray)
 };
-
-
 
 //create random number generator 
   // link to the sliding bar
 let randNum = function(){
-  for (i = 0; i < numChar; i++) {
-
+  isCheckbox();
+  for (i = 0; i < charNum.value; i++) {
+    let number = Math.random() * masterArray.length
+    number = Math.floor(number);
+    console.log(number)
   }
 }
 
+randNum();
 
 const generatePassword = function() {
     //pass in character amount
     // pass in master array
-
+    isCheckbox();
+    for (i = 0; i < charNum.value; i++) {
+      let number = Math.random() * masterArray.length
+      number = Math.floor(number);
+      console.log(number)
+    }
 }
 
 // Get references to the #generate element
