@@ -82,6 +82,7 @@ let isCheckbox = function(lowerBox, upperBox, numberBox, symbolBox) {
   console.log(masterArray)
 };
 
+isCheckbox();
 
 
 //create random number generator 
