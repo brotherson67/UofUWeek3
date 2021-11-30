@@ -1,0 +1,9 @@
+I'm going to attach each dom element to a js variable. 
+
+if an element is changed I don't want the page to change until the sumbit buttonis selected.
+
+when the submit button is changed I don't want the changed elements to revert to previous state
+
+
+RIGHT NOW THE MAIN ISSUE IS NOT HAVING THE PAGE REFRESH BEFORE THE PASSWORD IS SHOWN
+ITS OK IF IT RESETS THE CHECKLIST ITEMS 
