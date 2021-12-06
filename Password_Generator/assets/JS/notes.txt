@@ -7,3 +7,6 @@ when the submit button is changed I don't want the changed elements to revert to
 
 RIGHT NOW THE MAIN ISSUE IS NOT HAVING THE PAGE REFRESH BEFORE THE PASSWORD IS SHOWN
 ITS OK IF IT RESETS THE CHECKLIST ITEMS 
+
+I want the generate PASSWORD button to call the function to generate the PASSWORD, 
+I will need to prevent the default action on it though because it is a submit button

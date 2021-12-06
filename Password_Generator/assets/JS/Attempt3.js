@@ -51,9 +51,16 @@ permittedCharacter = () => {
             characterArray.push(numberArray[i])
         };
     };
+    return characterArray;
 };
+console.log(permittedCharacter.length)
+console.log(characterArray.length)
 
 // this function will generate a random character based on the permitted characters from permittedCharacters function 
+randomCharacter = permittedCharacter => {
+    let newCharNum = Math.random * permittedCharacter.length;
+     
+}
 
 // this function will return a string of numbers which will be the password
 generatePassword = (numberOfCharacters = 1) => {
@@ -71,7 +78,8 @@ generatePassword = (numberOfCharacters = 1) => {
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function writePassword(e) {
+  e.preventDefault
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -81,6 +89,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+console.log(typeof writePassword)
 
 
 //Current Issue - find way to prevent default when submit is clicked, taht way check boxes can be checked as well
