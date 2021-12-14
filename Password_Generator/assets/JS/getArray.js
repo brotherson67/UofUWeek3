@@ -48,4 +48,4 @@ let getMasterArray = function(){
 }
 
 
-modules.exports = getMasterArray();
+modules.exports = getMasterArray;
