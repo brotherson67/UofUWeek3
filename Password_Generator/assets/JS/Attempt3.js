@@ -56,37 +56,6 @@ let getMasterArray = function(){
 }
 // ==============================================
 
-// this function will return the array of all permitted character numbers
-permittedCharacter = () => {
-    let characterArray = [];
-    //if the uppercase box is checked then add the characters of upperArray
-    if (upperCase.checked){
-        for(let i = 0; i < upperCase.length; i++){
-            characterArray.push(upperArray[i])
-        };
-    };
-    console.log(characterArray + "array1")
-    if (lowerCase.checked){
-        for(let i = 0; i < upperCase.length; i++){
-            characterArray.push(lowerArray[i])
-        };
-    };
-    console.log(characterArray + "array2")
-    if (symbols.checked){
-        for(let i = 0; i < upperCase.length; i++){
-            characterArray.push(symbolsArray[i])
-        };
-    };
-    console.log(characterArray + "array3")
-    if (numbers.checked){
-        for(let i = 0; i < upperCase.length; i++){
-            characterArray.push(numberArray[i])
-        };
-    };
-    console.log(characterArray + "array1")
-    return characterArray;
-};
-// ==============================================
 console.log(permittedCharacter())
 console.log(masterArray.length)
 
@@ -98,8 +67,8 @@ randomCharacter = permittedCharacter => {
 
 // this function will return a string of numbers which will be the password
 generatePassword = (numberOfCharacters = 1) => {
-    // // for now this is a place holder function. It will be used in the writepassword function
-    // let password = "";
+    const totalOfChar = getMasterArray().length;
+    const passLength = (Math.random * totalOfChar);
     // for (let i = 0; i < numberOfCharacters; i++){
     //     // run through the number generating function for i 
     //     // push the new characters into the password using concat()
