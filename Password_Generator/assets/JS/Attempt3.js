@@ -1,11 +1,16 @@
+// SET VARIABLES
 let upperCase = document.getElementById("upperCase");
 let lowerCase = document.getElementById("lowerCase");
 let numbers = document.getElementById("numbers");
 let symbols = document.getElementById("symbols");
 const body = document.querySelector("body")
 const charNum = document.getElementById("charNum")
+// ==============================================
 
+// IMPORTS
+const getMasterArray = require('./getArray')
 
+// ==============================================
 
 let masterArray = [];
 
@@ -14,19 +19,11 @@ const upperArray = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 
 const numberArray = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
 const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 63, 64, 91, 92, 93, 94, 95, 96];
 
+// ___________
 console.dir(upperCase);
 
-// console.dir(upperCase)
-// let getMasterArray = function(){
-//     if (upperCase.checked){
-//         for (i = 0; i < upperArray.length; i++) {
-//             masterArray.push(lowerArray[i])
-//         }
-//         console.log("upperArray Clicked " + masterArray)
-//     } else {
-//         console.log("you didn't click the uppercase!")
-//     }
-// }
+// _________________
+
 
 
 // this function will return the array of all permitted character numbers
@@ -60,7 +57,7 @@ permittedCharacter = () => {
     return characterArray;
 };
 console.log(permittedCharacter.length)
-// console.log(characterArray.length)
+console.log(masterArray.length)
 
 // this function will generate a random character based on the permitted characters from permittedCharacters function 
 randomCharacter = permittedCharacter => {
@@ -88,14 +85,20 @@ function writePassword(e) {
   e.preventDefault
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  getMasterArray();
 
   passwordText.value = password;
 
 }
+// Get rid of this 
+// ______________________
+console.log(typeof writePassword);
+
+// _______________________
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-console.log(typeof writePassword);
+
 
 //Current Issue - find way to prevent default when submit is clicked, taht way check boxes can be checked as well
 // Write password to the #password input
