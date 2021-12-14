@@ -2,7 +2,6 @@ let upperCase = document.getElementById("upperCase");
 let lowerCase = document.getElementById("lowerCase");
 let numbers = document.getElementById("numbers");
 let symbols = document.getElementById("symbols");
-const generateBtn = document.getElementById("generate")
 const body = document.querySelector("body")
 const charNum = document.getElementById("charNum")
 
@@ -39,25 +38,29 @@ permittedCharacter = () => {
             characterArray.push(upperArray[i])
         };
     };
+    console.log(characterArray + "array1")
     if (lowerCase.checked){
         for(let i = 0; i < upperCase.length; i++){
             characterArray.push(lowerArray[i])
         };
     };
+    console.log(characterArray + "array2")
     if (symbols.checked){
         for(let i = 0; i < upperCase.length; i++){
             characterArray.push(symbolsArray[i])
         };
     };
+    console.log(characterArray + "array3")
     if (numbers.checked){
         for(let i = 0; i < upperCase.length; i++){
             characterArray.push(numberArray[i])
         };
     };
+    console.log(characterArray + "array1")
     return characterArray;
 };
 console.log(permittedCharacter.length)
-console.log(characterArray.length)
+// console.log(characterArray.length)
 
 // this function will generate a random character based on the permitted characters from permittedCharacters function 
 randomCharacter = permittedCharacter => {
@@ -92,17 +95,10 @@ function writePassword(e) {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-console.log(typeof writePassword)
+console.log(typeof writePassword);
 
 //Current Issue - find way to prevent default when submit is clicked, taht way check boxes can be checked as well
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
 // generateBtn.addEventListener("submit", writePassword);
