@@ -10,3 +10,5 @@ ITS OK IF IT RESETS THE CHECKLIST ITEMS
 
 I want the generate PASSWORD button to call the function to generate the PASSWORD, 
 I will need to prevent the default action on it though because it is a submit button
+
+

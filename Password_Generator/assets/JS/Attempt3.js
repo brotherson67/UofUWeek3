@@ -56,14 +56,16 @@ let getMasterArray = function(){
 }
 // ==============================================
 
-console.log(permittedCharacter())
-console.log(masterArray.length)
+// console.log(permittedCharacter())
+console.log(getMasterArray.length)
 
 // this function will generate a random character based on the permitted characters from permittedCharacters function 
-randomCharacter = permittedCharacter => {
-    let newCharNum = Math.random * permittedCharacter.length;
-     
-}
+randomCharacter = permittedCharacters => {
+    const i = Math.floor(Math.random * getMasterArray.length);
+    const newCharNum = permittedCharacters[i];
+    console.log(newCharNum);
+    return String.fromCharCode(newCharNum);
+};
 
 // this function will return a string of numbers which will be the password
 generatePassword = (numberOfCharacters = 1) => {
