@@ -5,6 +5,8 @@ let symbols = document.getElementById("symbols");
 const generateBtn = document.getElementById("generate")
 const body = document.querySelector("body")
 
+
+
 let masterArray = [];
 
 const lowerArray = [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122];
@@ -14,38 +16,21 @@ const symbolArray = [33,34,35, 36, 37, 38, 39, 40, 52, 42, 58, 59, 60, 61, 62, 6
 
 console.dir(upperCase);
 
-let getMasterArray = function(event){
-    if (upperCase.checked){
+let getMasterArray = function(upper){
+    if (upper){
         for (i = 0; i < upperArray.length; i++) {
             masterArray.push(upperArray[i])
         }
         console.log("upperArray Clicked " + masterArray)
-    };
-    if (lowerCase.checked){
-        for (i = 0; i < lowerArray.length; i++) {
-            masterArray.push(lowerArray[i])
-        }
-        console.log("lowerArray Clicked " + masterArray)
-    };
-    if (numbers.checked){
-        for (i = 0; i < numbers.length; i++) {
-            masterArray.push(numberArray[i])
-        }
-        console.log("numberArray Clicked " + masterArray)
-    };
-    if (symbols.checked){
-        for (i = 0; i < symbols.length; i++) {
-            masterArray.push(symbolArray[i])
-        }
-        console.log("symbolArray Clicked " + masterArray)
+    } else {
+        console.dir(upper)
     }
-    console.log(`this is the master array ${masterArray}`);
 }
 
-upperCase.addEventListener("click", getMasterArray())
+// upperCase.addEventListener("click", getMasterArray(upperCase.checked))
 
 
-// generateBtn.addEventListener("submit", getMasterArray())
+generateBtn.addEventListener("submit", getMasterArray(uppercase.checked))
 
 
 //Current Issue - find way to prevent default when submit is clicked, taht way check boxes can be checked as well
