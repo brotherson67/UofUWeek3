@@ -56,7 +56,6 @@ let getMasterArray = function(){
 }
 // ==============================================
 
-
 // this function will return the array of all permitted character numbers
 permittedCharacter = () => {
     let characterArray = [];
@@ -87,7 +86,8 @@ permittedCharacter = () => {
     console.log(characterArray + "array1")
     return characterArray;
 };
-console.log(permittedCharacter.length)
+// ==============================================
+console.log(permittedCharacter())
 console.log(masterArray.length)
 
 // this function will generate a random character based on the permitted characters from permittedCharacters function 
@@ -117,22 +117,12 @@ function writePassword(e) {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   getMasterArray();
+  permittedCharacter();
 
   passwordText.value = password;
 
-}
-// Get rid of this 
-// ______________________
-console.log(typeof writePassword);
-
-// _______________________
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-//Current Issue - find way to prevent default when submit is clicked, taht way check boxes can be checked as well
-// Write password to the #password input
-
-// Add event listener to generate button
-// generateBtn.addEventListener("submit", writePassword);
