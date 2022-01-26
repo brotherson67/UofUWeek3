@@ -21,10 +21,26 @@ const genCharCodeArray = function(first, last) {
 
 const allowedCharCodeArray = function() {
     let charCodeArray = [];
+    if (!includeSymbols && !includeLowercase && !includeNumbers && !includeUppercase){
+        console.log("You didn't select anything. The function allowedCharCodeArray couldn't run right.")
+    }
     if (includeLowercase){
         charCodeArray.push(...genCharCodeArray(97, 122))
     };
     if (includeUppercase){
-        charCodeArray.push(...genCharCodeArray(97, 122))
+        charCodeArray.push(...genCharCodeArray(67, 90))
     };
-}
+    if (includeNumbers){
+        charCodeArray.push(...genCharCodeArray(48, 57))
+    };
+    if (includeSymbols){
+        charCodeArray.push(...genCharCodeArray(33, 42))
+        charCodeArray.push(52)
+        charCodeArray.push(...genCharCodeArray(58, 64))
+        charCodeArray.push(...genCharCodeArray(91, 96))
+    };
+    return charCodeArray
+};
+
+
+module.exports = allowedCharCodeArray;

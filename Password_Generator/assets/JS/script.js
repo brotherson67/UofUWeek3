@@ -1,9 +1,13 @@
+//Imports
+const characterArray = require('./modules/translateCodes')
+
 // Constants
 const charNum = document.getElementById('charNumDiv');
 
 
-const generatePassword = () => {
-    return Math.random(10)
+const generatePassword = (event) => {
+    event.preventdefault();
+    return characterArray
 }
 
 // Get references to the #generate element
