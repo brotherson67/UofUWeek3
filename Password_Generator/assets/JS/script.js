@@ -32,6 +32,7 @@ const allowedCharCodeArray = function() {
     return charCodeArray
 };
 
+const charArray = allowedCharCodeArray();
 
 const generatePassword = () => {
     const password = [];
