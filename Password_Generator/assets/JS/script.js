@@ -5,7 +5,7 @@ const includeSymbols = document.getElementById('symbols');
 const charNum = document.getElementById('charNumDiv');
 
 // ARRAYS 
-const lowerCaseLetters = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
+const lowerCaseLetters = ['a', 'b', "c", 'd', 'e', 'f', 'g', 'h', 'i', "j", 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const upperCaseLetters = lowerCaseLetters.map(lowerCaseLetters => lowerCaseLetters.toUpperCase());
 const symbols = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', "<", '>', '=', '?', '?', '@', '[', ']', '^', '_', '`', '{', '}'];
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -33,10 +33,10 @@ const allowedCharCodeArray = function() {
 };
 
 
-const generatePassword = (event) => {
-    // event.preventdefault();
-    console.log(translateArray(genCharCodeArray()));
-    return allowedCharCodeArray()
+const generatePassword = () => {
+    const password = [];
+    
+    return password
 }
 
 // Get references to the #generate element
