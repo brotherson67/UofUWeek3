@@ -5,13 +5,6 @@ const includeSymbols = document.getElementById('symbols').checked;
 const charNum = document.getElementById('charNumDiv').value;
 const form = document.getElementById("form")
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
-})
-
-
-
-
 // ARRAYS 
 const lowerCaseLetters = ['a', 'b', "c", 'd', 'e', 'f', 'g', 'h', 'i', "j", 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const upperCaseLetters = lowerCaseLetters.map(lowerCaseLetters => lowerCaseLetters.toUpperCase());
@@ -39,6 +32,12 @@ const allowedCharCodeArray = function(includeLowercase, includeNumbers, includeS
     };
     return charCodeArray
 };
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    console.log(lowerCaseLetters)
+})
+
 
 const generatePassword = () => {
     const charArray = allowedCharCodeArray();
