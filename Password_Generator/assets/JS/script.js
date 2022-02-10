@@ -3,6 +3,14 @@ const includeUppercase = document.getElementById('upperCase').checked;
 const includeNumbers = document.getElementById('numbers').checked;
 const includeSymbols = document.getElementById('symbols').checked;
 const charNum = document.getElementById('charNumDiv').value;
+const form = document.getElementById("form")
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+})
+
+
+
 
 // ARRAYS 
 const lowerCaseLetters = ['a', 'b', "c", 'd', 'e', 'f', 'g', 'h', 'i', "j", 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -12,9 +20,9 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 
-const allowedCharCodeArray = function() {    // if an item is checked the corresponding characters are added to an array
+const allowedCharCodeArray = function(includeLowercase, includeNumbers, includeSymbols, includeUppercase) {    // if an item is checked the corresponding characters are added to an array
     let charCodeArray = [];
-    if (!includeSymbols.checked && !includeLowercase.checked && !includeNumbers.checked && !includeUppercase.checked){
+    if (!includeSymbols && !includeLowercase && !includeNumbers && !includeUppercase){
         console.log("You didn't select anything. The function allowedCharCodeArray couldn't run right.")
     }
     if (includeLowercase){

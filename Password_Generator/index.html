@@ -29,32 +29,32 @@
           ></textarea>
         </div>
 
-        <form>
+        <form id="form">
           <div class="checkBox" id="charNumDiv">
             <input type="text" id="charNum" value="24">
             <label>Character Amount(8 - 124)</label>
           </div>
+          <div id="whichChar">
+            <div class="checkBox">
+              <input type="checkbox" id="lowerCase">
+              <label>Included Lowercase Letters</label>
+            </div>
 
-          <div class="checkBox">
-            <input type="checkbox" id="lowerCase">
-            <label>Included Lowercase Letters</label>
+            <div class="checkBox">
+              <input type="checkbox" id="upperCase">
+              <label>Include Uppercase Letters</label>
+            </div>
+
+            <div class="checkBox">
+              <input type="checkbox" id="numbers">
+              <label>Include Numbers</label>
+            </div>
+
+            <div class="checkBox">
+              <input type="checkbox" id="symbols">
+              <label>Include Symbols</label>
+            </div>
           </div>
-
-          <div class="checkBox">
-            <input type="checkbox" id="upperCase">
-            <label>Include Uppercase Letters</label>
-          </div>
-
-          <div class="checkBox">
-            <input type="checkbox" id="numbers">
-            <label>Include Numbers</label>
-          </div>
-
-          <div class="checkBox">
-            <input type="checkbox" id="symbols">
-            <label>Include Symbols</label>
-          </div>
-
           <div class="card-footer">
             <button id="generate" class="btn" type="button">Generate Password</button>
           </div>
