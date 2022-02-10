@@ -11,44 +11,19 @@ const upperCaseLetters = lowerCaseLetters.map(lowerCaseLetters => lowerCaseLette
 const symbols = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', "<", '>', '=', '?', '?', '@', '[', ']', '^', '_', '`', '{', '}'];
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-
-
-const allowedCharCodeArray = function(includeLowercase, includeNumbers, includeSymbols, includeUppercase) {    // if an item is checked the corresponding characters are added to an array
-    let charCodeArray = [];
-    if (!includeSymbols && !includeLowercase && !includeNumbers && !includeUppercase){
-        console.log("You didn't select anything. The function allowedCharCodeArray couldn't run right.")
-    }
-    if (includeLowercase){
-        charCodeArray = charCodeArray.concat(...lowerCaseLetters)
-    };
-    if (includeUppercase){
-        charCodeArray = charCodeArray.concat(...upperCaseLetters)
-    };
-    if (includeNumbers){
-        charCodeArray = charCodeArray.concat(...numbers)
-    };
-    if (includeSymbols){
-        charCodeArray = charCodeArray.concat(...symbols)
-    };
-    return charCodeArray
-};
-
 form.addEventListener("submit", (e) => {
     e.preventDefault()
     console.log(lowerCaseLetters)
 })
 
-
-const generatePassword = () => {
-    const charArray = allowedCharCodeArray();
-    const password = [];
-    for (let i = 0; i < charArray.length; i++) {    // this will add a random number to 
-        password.push(Math.floor(i * charNum))
-    }
-
+const generatePassword = (includeLowercase, includeNumbers, includeSymbols, includeUppercase) => {
+    let charArray = [...lowerCaseLetters];
+    if (includeUppercase) { charArray.push(...upperCaseLetters)}
+    if (includeNumbers) { charArray.push(...numbers)}
+    if (includeSymbols) { charArray.push(...symbols)}
 
     
-    return password
+
 }
 
 // Get references to the #generate element
