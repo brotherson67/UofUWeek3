@@ -24,7 +24,7 @@ const symbolsArray = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ','
 const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // master Array function
-const masterArray = (upperCase, numbers, symbols, charNum) => {
+const generatePassword = (upperCase, numbers, symbols, charNum) => {
   let masterArray = lowerCaseLetters;
     console.log("the uppercase box is checked " + upperCase.checked)
   if (upperCase.checked) masterArray.push(...upperCaseLetters);
@@ -48,10 +48,9 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword(e) {
   e.preventDefault();
-//   var password = generatePassword();
+  var password = generatePassword(upperCase, numbers, symbols, charNum.value);
   var passwordText = document.querySelector("#password");
-  console.log(masterArray(upperCase, numbers, symbols, charNum.value));
-//   console.log(charNum.value)
+  console.log(generatePassword(upperCase, numbers, symbols, charNum.value));
 
   passwordText.value = password;
 }
