@@ -1,7 +1,6 @@
-const includeLowercase = document.getElementById('lowerCase');
-const includeUppercase = document.getElementById('upperCase');
-const includeNumbers = document.getElementById('numbers');
-const includeSymbols = document.getElementById('symbols');
+const includeUppercase = document.getElementById('upperCase').checked;
+const includeNumbers = document.getElementById('numbers').checked;
+const includeSymbols = document.getElementById('symbols').checked;
 const charNum = document.getElementById('charNumDiv').value;
 const form = document.getElementById("form")
 
@@ -13,13 +12,12 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const symbolsIncluded = includeSymbols.checked;
 
-
 function generatePassword(includeNumbers, includeSymbols, includeUppercase, charNum) {
     let charArray = lowerCaseLetters;
-    if (includeUppercase.checked) {charArray = charArray.push(upperCaseLetters)};
-    if (includeNumbers.checked) {charArray = charArray.push(numbers)};
-    if (includeSymbols.checked) {charArray = charArray.concat(symbols)};
-
+    // if (includeUppercase.checked) {charArray = charArray.push(upperCaseLetters)};
+    if (includeNumbers) {charArray = charArray.push(numbers)};
+    // if (includeSymbols.checked) {charArray = charArray.concat(symbols)};
+    console.log(includeNumbers)
     return charArray
 }
 
@@ -36,7 +34,7 @@ function writePassword(e) {
     e.preventDefault()
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-    console.log(generatePassword())
+console.dir(includeNumbers)
   passwordText.value = password;
 }
 
