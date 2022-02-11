@@ -2,7 +2,7 @@ const includeUppercase = document.getElementById('upperCase').checked;
 const includeNumbers = document.getElementById('numbers').checked;
 const includeSymbols = document.getElementById('symbols').checked;
 const charNum = document.getElementById('charNumDiv').value;
-
+const form = document.getElementById("form")
 
 // ARRAYS 
 const lowerCaseLetters = ['a', 'b', "c", 'd', 'e', 'f', 'g', 'h', 'i', "j", 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -24,23 +24,16 @@ function generatePassword(includeNumbers, includeSymbols, includeUppercase, char
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-generateBtn.addEventListener("submit", (e) => {
-  e.preventDefault()
+// Write password to the #password input
+function writePassword() {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault()
+  });
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   console.dir(includeNumbers)
   passwordText.value = password;
-});
-
-
-// Write password to the #password input
-// function writePassword(e) {
-//     e.preventDefault()
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-// console.dir(includeNumbers)
-//   passwordText.value = password;
-// }
+}
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("submit", writePassword);
