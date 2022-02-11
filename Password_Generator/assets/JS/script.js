@@ -12,12 +12,12 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const symbolsIncluded = includeSymbols.checked;
 
-function generatePassword(includeNumbers, includeSymbols, includeUppercase, charNum) {
+function generatePassword(numbers, symbols, uppercase, characters) {
     let charArray = lowerCaseLetters;
-    if (includeUppercase) {charArray = charArray.push(upperCaseLetters)};
-    if (includeNumbers) {charArray = charArray.push(numbers)};
-    if (includeSymbols) {charArray = charArray.concat(symbols)};
-    console.log(includeNumbers)
+    if (uppercase) {charArray = charArray.push(upperCaseLetters)};
+    if (numbers) {charArray = charArray.push(numbers)};
+    if (symbols) {charArray = charArray.concat(symbols)};
+    console.log(numbers)
     return charArray
 }
 
@@ -26,14 +26,15 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault()
-  });
-  var password = generatePassword();
+  var password = generatePassword(includeNumbers, includeSymbols, includeUppercase, charNum);
   var passwordText = document.querySelector("#password");
   console.dir(includeNumbers)
   passwordText.value = password;
-}
+};
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+  });
 
 // Add event listener to generate button
-generateBtn.addEventListener("submit", writePassword);
+generateBtn.addEventListener("submit", writePassword());
