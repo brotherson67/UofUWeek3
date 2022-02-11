@@ -24,6 +24,13 @@ const symbolsArray = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ','
 const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // master Array function
+const masterArray = (upperCase, numbers, symbols) => {
+  let masterArray = lowerCaseLetters;
+  if (symbols.checked) masterArray.push(...symbolsArray)
+  console.log(symbols.checked)
+
+  return masterArray
+}
 
 
 // Get references to the #generate element
@@ -34,9 +41,9 @@ function writePassword(e) {
   e.preventDefault();
 //   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  console.log(symbols.checked)
-  passwordText.value = password;
+  console.log(masterArray(upperCase, numbers, symbols));
 
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
