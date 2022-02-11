@@ -35,7 +35,7 @@ const masterArray = (upperCase, numbers, symbols, charNum) => {
 
   let passwordArray = [];
   for (i=0; i<charNum; i++) {
-    let newChar = masterArray[Math.floor(Math.random() * charNum)]
+    let newChar = masterArray[Math.floor(Math.random() * masterArray.length)]
     passwordArray.push(newChar)
   };
 
