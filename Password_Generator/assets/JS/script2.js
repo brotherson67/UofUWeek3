@@ -14,7 +14,7 @@ const lowercase = document.getElementById('lowerCase');    // the lowercase chec
 const upperCase = document.getElementById('upperCase');    // the uppercase checkbox element
 const numbers = document.getElementById('numbers');        // the numbers checkbox element
 const symbols = document.getElementById('symbols');        // the symbols checkbox element
-const charNum = document.getElementById('charNumDiv');     // the number of characters element
+const charNum = document.getElementById('charNum');     // the number of characters element
 const form = document.getElementById("form")               // this represents the entire form, may use for prevent default
 
 // ARRAYS
@@ -24,19 +24,27 @@ const symbolsArray = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ','
 const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // master Array function
-const masterArray = (upperCase, numbers, symbols) => {
+const masterArray = (upperCase, numbers, symbols, charNum) => {
   let masterArray = lowerCaseLetters;
-  console.log("the uppercase box is checked " + upperCase.checked)
+    console.log("the uppercase box is checked " + upperCase.checked)
   if (upperCase.checked) masterArray.push(...upperCaseLetters);
     console.log("the numbers box is checked " + numbers.checked);
   if (numbers.checked) masterArray.push(...numbersArray)
     console.log("the symbols box is checked " + symbols.checked)
   if (symbols.checked) masterArray.push(...symbolsArray)
-  console.log(symbols.checked)
+
+  for (i=0; i<charNum; i++) {
+
+  }
 
   return masterArray
 }
 
+// CREATE FUNCITON TO RETURN AN ARRAY OF CHARACTERS THAT WILL MAKE UP THE PASSWORD
+// const passwordArray = (masterArray) => {
+
+//     return masterArray()
+// };
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -46,7 +54,8 @@ function writePassword(e) {
   e.preventDefault();
 //   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  console.log(masterArray(upperCase, numbers, symbols));
+//   console.log(masterArray(upperCase, numbers, symbols));
+  console.log(charNum.value)
 
   passwordText.value = password;
 }
