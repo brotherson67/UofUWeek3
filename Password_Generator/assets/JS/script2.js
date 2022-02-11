@@ -39,7 +39,7 @@ const masterArray = (upperCase, numbers, symbols, charNum) => {
     passwordArray.push(newChar)
   };
 
-    return passwordArray
+    return passwordArray.join("")
 };
 
 // Get references to the #generate element
