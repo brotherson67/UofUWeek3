@@ -21,20 +21,23 @@ function generatePassword(numbers, symbols, uppercase, characters) {
     return charArray
 }
 
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+  });
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function writePassword(event) {
+  event.preventDefault()
   var password = generatePassword(includeNumbers, includeSymbols, includeUppercase, charNum);
   var passwordText = document.querySelector("#password");
   console.dir(includeNumbers)
   passwordText.value = password;
 };
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
-  });
+
 
 // Add event listener to generate button
-generateBtn.addEventListener("submit", writePassword());
+generateBtn.addEventListener("submit", writePassword);
