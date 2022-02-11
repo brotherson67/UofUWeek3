@@ -17,15 +17,24 @@ const symbols = document.getElementById('symbols');        // the symbols checkb
 const charNum = document.getElementById('charNumDiv');     // the number of characters element
 const form = document.getElementById("form")               // this represents the entire form, may use for prevent default
 
+// ARRAYS
+const lowerCaseLetters = ['a', 'b', "c", 'd', 'e', 'f', 'g', 'h', 'i', "j", 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const upperCaseLetters = lowerCaseLetters.map(lowerCaseLetters => lowerCaseLetters.toUpperCase());
+const symbolsArray = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', "<", '>', '=', '?', '?', '@', '[', ']', '^', '_', '`', '{', '}'];
+const numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// master Array function
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
+function writePassword(e) {
+  e.preventDefault();
+//   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  console.log(symbols.checked)
   passwordText.value = password;
 
 }
