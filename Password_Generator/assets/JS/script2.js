@@ -50,7 +50,7 @@ function writePassword(e) {
   e.preventDefault();
 //   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  console.log(masterArray(upperCase, numbers, symbols, charNum));
+  console.log(masterArray(upperCase, numbers, symbols, charNum.value));
 //   console.log(charNum.value)
 
   passwordText.value = password;
