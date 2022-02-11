@@ -33,18 +33,14 @@ const masterArray = (upperCase, numbers, symbols, charNum) => {
     console.log("the symbols box is checked " + symbols.checked)
   if (symbols.checked) masterArray.push(...symbolsArray)
 
+  let passwordArray = [];
   for (i=0; i<charNum; i++) {
+    let newChar = masterArray[Math.floor(Math.random() * charNum)]
+    passwordArray.push(newChar)
+  };
 
-  }
-
-  return masterArray
-}
-
-// CREATE FUNCITON TO RETURN AN ARRAY OF CHARACTERS THAT WILL MAKE UP THE PASSWORD
-// const passwordArray = (masterArray) => {
-
-//     return masterArray()
-// };
+    return passwordArray
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -54,8 +50,8 @@ function writePassword(e) {
   e.preventDefault();
 //   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-//   console.log(masterArray(upperCase, numbers, symbols));
-  console.log(charNum.value)
+  console.log(masterArray(upperCase, numbers, symbols, charNum));
+//   console.log(charNum.value)
 
   passwordText.value = password;
 }
